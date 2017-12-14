@@ -49,6 +49,6 @@ Upod recovery completion duplicates wil be removed.
 
 You need manually rewind 2nd-tier replicas to master
 ```
-gosu postgres pg_rewind --target-pgdata /var/lib/postgresql/data/ --source-server 'host=pgmaster user=replication_user password=replication_pass dbname=replication_db'
+gosu postgres pg_rewind --target-pgdata /var/lib/postgresql/data/ --source-server 'host=pgmaster user=replication_user password=replication_pass dbname=replication'
 ```
 

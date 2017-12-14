@@ -26,7 +26,7 @@ services:
                                   # used for pgpool.conf file
             #defaults:
             CLUSTER_NAME: pg_cluster # default is pg_cluster
-            REPLICATION_DB: replication_db # default is replication_db
+            REPLICATION_DB: replication # default is replication_db
             REPLICATION_USER: replication_user # default is replication_user
             REPLICATION_PASSWORD: replication_pass # default is replication_pass
             
