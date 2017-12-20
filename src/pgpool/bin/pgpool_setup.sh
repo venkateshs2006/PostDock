@@ -117,13 +117,13 @@ rm -rf /var/run/postgresql/pgpool.pid #in case file exists after urgent stop
 # chmod 4755 /sbin/ifconfig
 # chmod 4755 /usr/sbin/arping
 
-chmod -R 777 /sbin
-chmod -R 777 /usr/sbin
+#chmod -R 777 /sbin
+#chmod -R 777 /usr/sbin
+#
+#chmod -R u+s /sbin
+#chmod -R u+s /usr/sbin
 
-chmod -R u+s /sbin
-chmod -R u+s /usr/sbin
-
-#chmod u+s /sbin/ifconfig
-#chmod u+s /usr/sbin/arping
+chmod u+s /sbin/ifconfig
+chmod u+s /usr/sbin/arping
 
 

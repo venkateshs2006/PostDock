@@ -14,5 +14,5 @@ echo '>>> TURNING PGPOOL...'
 /usr/local/bin/pgpool/pgpool_setup.sh
 
 echo '>>> STARTING PGPOOL...'
-# gosu postgres /usr/local/bin/pgpool/pgpool_start.sh
-/usr/local/bin/pgpool/pgpool_start.sh
+gosu postgres /usr/local/bin/pgpool/pgpool_start.sh
+# /usr/local/bin/pgpool/pgpool_start.sh
