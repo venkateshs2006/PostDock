@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-cp -f /var/pgpool_configs/pgpool.conf $CONFIG_FILE
+cp -f /var/pgpool_configs/$CONF_FILE_NAME $CONFIG_FILE
 
 echo ">>> Opening access from all hosts by md5 in $HBA_FILE" #TODO: more configurable?
 echo "host all all 0.0.0.0/0 md5" > $HBA_FILE
@@ -111,4 +111,19 @@ touch $CONFIG_FILE $PCP_FILE $HBA_FILE
 chown postgres:postgres $CONFIG_FILE $PCP_FILE $HBA_FILE $POOL_PASSWD_FILE
 
 rm -rf /var/run/postgresql/pgpool.pid #in case file exists after urgent stop
+
+# http://www.pgpool.net/pgpool-web/contrib_docs/watchdog_master_slave_3.3/en.html#config_setuid
+# chown postgres:postgres /home/apache/sbin
+# chmod 4755 /sbin/ifconfig
+# chmod 4755 /usr/sbin/arping
+
+chmod -R 777 /sbin
+chmod -R 777 /usr/sbin
+
+chmod -R u+s /sbin
+chmod -R u+s /usr/sbin
+
+#chmod u+s /sbin/ifconfig
+#chmod u+s /usr/sbin/arping
+
 
